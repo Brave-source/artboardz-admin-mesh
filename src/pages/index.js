@@ -1,11 +1,12 @@
-import Head from "next/head";
-import { CardanoWallet, MeshBadge } from "@meshsdk/react";
-import CollectionBoard from '../components/Collections/CollectionBoard';
+import Head from 'next/head'
 import { useEffect } from "react";
-
+import ArtFlowSection from "@/components/sections/HomeSections/ArtFlowSection";
+import BenefitsSections from "@/components/sections/HomeSections/BenefitsSections";
+import BillboardSection from "@/components/sections/HomeSections/BillboardSection";
+import HeroSection from "@/components/sections/HomeSections/HeroSection";
 export default function Home() {
   useEffect(() => {
-    document.querySelector("#main-layout");
+    document.querySelector("#main-layout").scrollTop = 0;
   }, []);
   return (
     <>
@@ -15,10 +16,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <CollectionBoard />
+      <HeroSection />
+      <BillboardSection />
+      <BenefitsSections />
+      <ArtFlowSection />
     </>
-       
-
-       
-  );
+  )
 }

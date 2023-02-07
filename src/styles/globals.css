@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@400;500;700;900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -37,28 +37,58 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
-@layer base {
-  html {
-    font-family: Roboto, sans-serif;
-  }
+
+.layout {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "header"
+    " main";
 }
 
-form {
-  scrollbar-color: rgb(179, 181, 189) transparent;
-  scrollbar-width: thin;
+.header {
+  grid-area: header;
+}
+
+.main {
+  grid-area: main;
+  scrollbar-color: rgba(18, 61, 145, 1) transparent;
+  scrollbar-width: none;
   scroll-behavior: smooth;
 }
 
-form::-webkit-scrollbar {
-  width: 5px;
+.main::-webkit-scrollbar {
+  width: 0;
 }
 
-form::-webkit-scrollbar-thumb {
-  background: rgb(179, 181, 189);
+.main::-webkit-scrollbar-thumb {
+  background: rgba(18, 61, 145, 1);
   border-radius: 2px;
+}
+
+@media (min-width: 640px) {
+  .layout {
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "navbar header"
+      "navbar main";
+  }
+
+  .backdrop {
+    background: radial-gradient(75.93% 75.93% at 13.92% 23.07%,
+        #0056ff 0%,
+        #ff3800 100%) !important;
+    filter: blur(250px);
+    z-index: -1;
+  }
+
+  .navbar {
+    grid-area: navbar;
+  }
 }

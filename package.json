@@ -1,5 +1,5 @@
 {
-  "name": "admin",
+  "name": "artboardz",
   "description": "A Mesh starter template",
   "version": "0.1.0",
   "private": true,
@@ -12,14 +12,25 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@heroicons/react": "^2.0.14",
     "@meshsdk/core": "1.2.0-beta.4",
     "@meshsdk/react": "1.1.1",
+    "@mui/material": "^5.11.7",
     "@reduxjs/toolkit": "^1.9.2",
     "all": "^0.0.0",
+    "axios": "^1.3.0",
+    "cookie": "^0.5.0",
     "daisyui": "^2.49.0",
+    "dotenv": "^16.0.3",
+    "firebase": "^9.16.0",
+    "mongodb": "^5.0.0",
+    "mongoose": "^6.9.0",
     "next": "13.0.3",
     "next-redux-wrapper": "^8.1.0",
     "react": "18.2.0",
+    "react-collapsed": "^3.6.0",
     "react-dom": "18.2.0",
     "react-redux": "^8.0.5"
   },
